@@ -28,20 +28,20 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft:: @ 821FFA6
 	end
 
 	.align 2
-LilycoveCity_DepartmentStore_5F_Pokemart_Dolls: @ 821FFC0
-	.2byte DECOR_PICHU_DOLL
-	.2byte DECOR_PIKACHU_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_JIGGLYPUFF_DOLL
-	.2byte DECOR_DUSKULL_DOLL 
-	.2byte DECOR_WYNAUT_DOLL
-	.2byte DECOR_BALTOY_DOLL
-	.2byte DECOR_KECLEON_DOLL
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
-	.2byte DECOR_SWABLU_DOLL
-	.2byte DECOR_GULPIN_DOLL
-	.2byte DECOR_NONE
+LilycoveCity_DepartmentStore_5F_Pokemart_21FFC0: @ 821FFC0
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_SUPER_REPEL
+	.2byte 91
+	.2byte 92
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_NONE
 	release
 	end
 
