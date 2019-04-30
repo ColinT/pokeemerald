@@ -373,6 +373,10 @@ static const u8 sMaxRepelDesc[] = _(
     "POKéMON for 250\n"
     "steps.");
 
+static const u8 sAbilityCapsuleDesc[] = _(
+    "Switches a POKé-\n"
+    "MON's ability.");
+
 static const u8 sEscapeRopeDesc[] = _(
     "Use to escape\n"
     "instantly from a\n"
@@ -410,6 +414,26 @@ static const u8 sWaterStoneDesc[] = _(
     "evolve.");
 
 static const u8 sLeafStoneDesc[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 sDawnStoneDesc[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 sDuskStoneDesc[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 sShinyStoneDesc[] = _(
+    "Makes certain\n"
+    "species of POKéMON\n"
+    "evolve.");
+
+static const u8 sIceStoneDesc[] = _(
     "Makes certain\n"
     "species of POKéMON\n"
     "evolve.");
