@@ -1009,7 +1009,7 @@ const struct Item gItems[] =
     {
         .name = _("X Attack"),
         .itemId = ITEM_X_ATTACK,
-        .price = 500,
+        .price = 1000,
         .description = sXAttackDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1022,7 +1022,7 @@ const struct Item gItems[] =
     {
         .name = _("X Defend"),
         .itemId = ITEM_X_DEFENSE,
-        .price = 550,
+        .price = 2000,
         .description = sXDefendDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1035,7 +1035,7 @@ const struct Item gItems[] =
     {
         .name = _("X Speed"),
         .itemId = ITEM_X_SPEED,
-        .price = 350,
+        .price = 1000,
         .description = sXSpeedDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1048,7 +1048,7 @@ const struct Item gItems[] =
     {
         .name = _("X Accuracy"),
         .itemId = ITEM_X_ACCURACY,
-        .price = 950,
+        .price = 1000,
         .description = sXAccuracyDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -1061,7 +1061,7 @@ const struct Item gItems[] =
     {
         .name = _("X Sp. Atk."),
         .itemId = ITEM_X_SP_ATK,
-        .price = 350,
+        .price = 1000,
         .description = sXSpecialAttackDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
