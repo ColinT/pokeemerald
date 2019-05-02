@@ -3158,12 +3158,12 @@ const struct Item gItems[] =
         .name = _("Power Bracer"),
         .itemId = ITEM_POWER_BRACER,
         .price = 3000,
-        .holdEffect = HOLD_EFFECT_POWER_BRACER,
+        .holdEffect = HOLD_EFFECT_EV_BOOST,
         .description = sPowerBracerDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .secondaryId = STAT_ATK,
     },
 
     [ITEM_POWER_BELT] =
@@ -3171,12 +3171,12 @@ const struct Item gItems[] =
         .name = _("Power Belt"),
         .itemId = ITEM_POWER_BELT,
         .price = 3000,
-        .holdEffect = HOLD_EFFECT_POWER_BELT,
+        .holdEffect = HOLD_EFFECT_EV_BOOST,
         .description = sPowerBeltDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .secondaryId = STAT_DEF,
     },
 
     [ITEM_POWER_LENS] =
@@ -3184,12 +3184,12 @@ const struct Item gItems[] =
         .name = _("Power Lens"),
         .itemId = ITEM_POWER_LENS,
         .price = 3000,
-        .holdEffect = HOLD_EFFECT_POWER_LENS,
+        .holdEffect = HOLD_EFFECT_EV_BOOST,
         .description = sPowerLensDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .secondaryId = STAT_SPATK,
     },
 
     [ITEM_POWER_BAND] =
@@ -3197,12 +3197,12 @@ const struct Item gItems[] =
         .name = _("Power Band"),
         .itemId = ITEM_POWER_BAND,
         .price = 3000,
-        .holdEffect = HOLD_EFFECT_POWER_BAND,
+        .holdEffect = HOLD_EFFECT_EV_BOOST,
         .description = sPowerBandDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .secondaryId = STAT_SPDEF,
     },
 
     [ITEM_POWER_ANKLET] =
@@ -3210,12 +3210,12 @@ const struct Item gItems[] =
         .name = _("Power Anklet"),
         .itemId = ITEM_POWER_ANKLET,
         .price = 3000,
-        .holdEffect = HOLD_EFFECT_POWER_ANKLET,
+        .holdEffect = HOLD_EFFECT_EV_BOOST,
         .description = sPowerAnkletDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .secondaryId = STAT_SPEED,
     },
 
     [ITEM_POWER_WEIGHT] =
@@ -3223,12 +3223,12 @@ const struct Item gItems[] =
         .name = _("Power Weight"),
         .itemId = ITEM_POWER_WEIGHT,
         .price = 3000,
-        .holdEffect = HOLD_EFFECT_POWER_WEIGHT,
+        .holdEffect = HOLD_EFFECT_EV_BOOST,
         .description = sPowerWeightDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .secondaryId = STAT_HP,
     },
 
     [ITEM_SEA_INCENSE] =
