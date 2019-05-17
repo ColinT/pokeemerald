@@ -8116,7 +8116,6 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
         .secondaryId = STAT_ATK,
     },
 
