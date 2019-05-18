@@ -4991,7 +4991,7 @@ const struct Item gItems[] =
 
     [ITEM_POKE_FLUTE] =
     {
-        .name = _("Poké FLUTE"),
+        .name = _("Poké Flute"),
         .itemId = ITEM_POKE_FLUTE,
         .price = 0,
         .holdEffect = HOLD_EFFECT_NONE,
@@ -5197,7 +5197,7 @@ const struct Item gItems[] =
 
     [ITEM_COVER_FOSSIL] =
     {
-        .name = _("Covet Fossil"),
+        .name = _("Cover Fossil"),
         .itemId = ITEM_COVER_FOSSIL,
         .price = 0,
         .description = sCoverFossilDesc,
