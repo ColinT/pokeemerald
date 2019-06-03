@@ -5422,7 +5422,7 @@ bool8 ExecuteTableBasedItemEffect(struct Pokemon *mon, u16 item, u8 partyIndex, 
 bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 moveIndex, bool8 usedByAI)
 {
     u32 dataUnsigned;
-    s32 dataSigned;
+    s32 dataSigned, evCap;
     s32 friendship;
     s32 i;
     bool8 retVal = TRUE;
@@ -5659,12 +5659,17 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                             // Has EV increase limit already been reached?
                             if (evCount >= MAX_TOTAL_EVS)
                                 return TRUE;
-                            if (dataSigned >= EV_ITEM_RAISE_LIMIT)
+
+                            if (itemEffect[10])
+                                evCap = 100;
+                            else
+                                evCap = 252;
+
+                            if (dataSigned >= evCap)
                                 break;
 
-                            // Limit the increase
-                            if (dataSigned + evChange > EV_ITEM_RAISE_LIMIT)
-                                temp2 = EV_ITEM_RAISE_LIMIT - (dataSigned + evChange) + evChange;
+                            if (dataSigned + r2 > evCap)
+                                r5 = evCap - (dataSigned + r2) + r2;
                             else
                                 temp2 = evChange;
 
@@ -5888,12 +5893,17 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                             // Has EV increase limit already been reached?
                             if (evCount >= MAX_TOTAL_EVS)
                                 return TRUE;
-                            if (dataSigned >= EV_ITEM_RAISE_LIMIT)
+
+                            if (itemEffect[10])
+                                evCap = 100;
+                            else
+                                evCap = 252;
+
+                            if (dataSigned >= evCap)
                                 break;
 
-                            // Limit the increase
-                            if (dataSigned + evChange > EV_ITEM_RAISE_LIMIT)
-                                temp2 = EV_ITEM_RAISE_LIMIT - (dataSigned + evChange) + evChange;
+                            if (dataSigned + r2 > evCap)
+                                r5 = evCap - (dataSigned + r2) + r2;
                             else
                                 temp2 = evChange;
 
