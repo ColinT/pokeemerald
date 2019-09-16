@@ -62,6 +62,79 @@ static const u8 sPremierBallDesc[] = _(
     "in commemoration\n"
     "of some event.");
 
+static const u8 sLevelBallDesc[] = _(
+    "A Ball that works\n"
+    "well on lower\n"
+    "level POKéMON.");
+
+static const u8 sLureBallDesc[] = _(
+    "A Ball that works\n"
+    "well on fished\n"
+    "up POKéMON.");
+
+static const u8 sMoonBallDesc[] = _(
+    "A Ball that works\n"
+    "well on Moon\n"
+    "Stone users.");
+
+static const u8 sFriendBallDesc[] = _(
+    "A Ball that makes\n"
+    "a POKéMON friendly\n"
+    "when caught.");
+
+static const u8 sLoveBallDesc[] = _(
+    "Works well on\n"
+    "POKéMON of the\n"
+    "opposite gender.");
+
+static const u8 sHeavyBallDesc[] = _(
+    "Works well on\n"
+    "very heavy\n"
+    "POKéMON.");
+
+static const u8 sFastBallDesc[] = _(
+    "Works well on\n"
+    "very fast\n"
+    "POKéMON.");
+
+static const u8 sHealBallDesc[] = _(
+    "A remedial Ball\n"
+    "that restores\n"
+    "caught POKéMON.");
+
+static const u8 sQuickBallDesc[] = _(
+    "Works well if\n"
+    "used on the\n"
+    "first turn.");
+
+static const u8 sDuskBallDesc[] = _(
+    "Works well if\n"
+    "used in a\n"
+    "dark place.");
+
+static const u8 sCherishBallDesc[] = _(
+    "A rare Ball made\n"
+    "in commemoration\n"
+    "of some event.");
+
+static const u8 sSportBallDesc[] = _(
+    "A special Ball used\n"
+    "in the Bug-Catching\n"
+    "Contest.");
+
+static const u8 sParkBallDesc[] = _(
+    "A special Ball for\n"
+    "the Pal Park.");
+
+static const u8 sDreamBallDesc[] = _(
+    "A Poké Ball used in\n"
+    "the Entree Forest.\n"
+    "It doesn't fail.");
+
+static const u8 sBeastBallDesc[] = _(
+    "A Ball designed to\n"
+    "catch Ultra Beasts.");
+
 // Medicine
 static const u8 sPotionDesc[] = _(
     "Restores the HP of\n"
@@ -602,51 +675,227 @@ static const u8 sRetroMailDesc[] = _(
     "POKéMON.");
 
 // Berries
-const u8 gCheriBerryItemDescription[] = _("A hold item that\nheals paralysis\nin battle.");
-const u8 gChestoBerryItemDescription[] = _("A hold item that\nawakens POKéMON\nin battle.");
-const u8 gPechaBerryItemDescription[] = _("A hold item that\nheals poisoning\nin battle.");
-const u8 gRawstBerryItemDescription[] = _("A hold item that\nheals a burn in\nbattle.");
-const u8 gAspearBerryItemDescription[] = _("A hold item that\ndefrosts POKéMON\nin battle.");
-const u8 gLeppaBerryItemDescription[] = _("A hold item that\nrestores 10 PP in\nbattle.");
-const u8 gOranBerryItemDescription[] = _("A hold item that\nrestores 10 HP in\nbattle.");
-const u8 gPersimBerryItemDescription[] = _("A hold item that\nheals confusion\nin battle.");
-const u8 gLumBerryItemDescription[] = _("A hold item that\nheals any status\nproblem in battle.");
-const u8 gSitrusBerryItemDescription[] = _("A hold item that\nrestores 30 HP in\nbattle.");
-const u8 gFigyBerryItemDescription[] = _("A hold item that\nrestores HP but\nmay confuse.");
-const u8 gWikiBerryItemDescription[] = _("A hold item that\nrestores HP but\nmay confuse.");
-const u8 gMagoBerryItemDescription[] = _("A hold item that\nrestores HP but\nmay confuse.");
-const u8 gAguavBerryItemDescription[] = _("A hold item that\nrestores HP but\nmay confuse.");
-const u8 gIapapaBerryItemDescription[] = _("A hold item that\nrestores HP but\nmay confuse.");
-const u8 gRazzBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow RAZZ.");
-const u8 gBlukBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow BLUK.");
-const u8 gNanabBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow NANAB.");
-const u8 gWepearBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow WEPEAR.");
-const u8 gPinapBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow PINAP.");
-const u8 gPomegBerryItemDescription[] = _("Makes a POKéMON\nfriendly but lowers\nbase HP.");
-const u8 gKelpsyBerryItemDescription[] = _("Makes a POKéMON\nfriendly but lowers\nbase ATTACK.");
-const u8 gQualotBerryItemDescription[] = _("Makes a POKéMON\nfriendly but lowers\nbase DEFENSE.");
-const u8 gHondewBerryItemDescription[] = _("Makes a POKéMON\nfriendly but lowers\nbase SP. ATK.");
-const u8 gGrepaBerryItemDescription[] = _("Makes a POKéMON\nfriendly but lowers\nbase SP. DEF.");
-const u8 gTamatoBerryItemDescription[] = _("Makes a POKéMON\nfriendly but lowers\nbase SPEED.");
-const u8 gCornnBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow CORNN.");
-const u8 gMagostBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow MAGOST.");
-const u8 gRabutaBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow RABUTA.");
-const u8 gNomelBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow NOMEL.");
-const u8 gSpelonBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow SPELON.");
-const u8 gPamtreBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow PAMTRE.");
-const u8 gWatmelBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow WATMEL.");
-const u8 gDurinBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow DURIN.");
-const u8 gBelueBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow BELUE.");
-const u8 gLiechiBerryItemDescription[] = _("A hold item that\nraises ATTACK in\na pinch.");
-const u8 gGanlonBerryItemDescription[] = _("A hold item that\nraises DEFENSE in\na pinch.");
-const u8 gSalacBerryItemDescription[] = _("A hold item that\nraises SPEED in\na pinch.");
-const u8 gPetayaBerryItemDescription[] = _("A hold item that\nraises SP. ATK in\na pinch.");
-const u8 gApicotBerryItemDescription[] = _("A hold item that\nraises SP. DEF in\na pinch.");
-const u8 gLansatBerryItemDescription[] = _("A hold item that\nups the critical-\nhit rate in a pinch.");
-const u8 gStarfBerryItemDescription[] = _("A hold item that\nsharply boosts a\nstat in a pinch.");
-const u8 gEnigmaBerryItemDescription[] = _("{POKEBLOCK} ingredient.\nPlant in loamy soil\nto grow a mystery.");
+static const u8 sCheriBerryDesc[] = _(
+    "A hold item that\n"
+    "heals paralysis\n"
+    "in battle.");
 
-static const u8 gItemDescription_OccaBerry[] = _(
+static const u8 sChestoBerryDesc[] = _(
+    "A hold item that\n"
+    "awakens POKéMON\n"
+    "in battle.");
+
+static const u8 sPechaBerryDesc[] = _(
+    "A hold item that\n"
+    "heals poisoning\n"
+    "in battle.");
+
+static const u8 sRawstBerryDesc[] = _(
+    "A hold item that\n"
+    "heals a burn in\n"
+    "battle.");
+
+static const u8 sAspearBerryDesc[] = _(
+    "A hold item that\n"
+    "defrosts POKéMON\n"
+    "in battle.");
+
+static const u8 sLeppaBerryDesc[] = _(
+    "A hold item that\n"
+    "restores 10 PP in\n"
+    "battle.");
+
+static const u8 sOranBerryDesc[] = _(
+    "A hold item that\n"
+    "restores 10 HP in\n"
+    "battle.");
+
+static const u8 sPersimBerryDesc[] = _(
+    "A hold item that\n"
+    "heals confusion\n"
+    "in battle.");
+
+static const u8 sLumBerryDesc[] = _(
+    "A hold item that\n"
+    "heals any status\n"
+    "problem in battle.");
+
+static const u8 sSitrusBerryDesc[] = _(
+    "A hold item that\n"
+    "restores 30 HP in\n"
+    "battle.");
+
+static const u8 sFigyBerryDesc[] = _(
+    "A hold item that\n"
+    "restores HP but\n"
+    "may confuse.");
+
+static const u8 sWikiBerryDesc[] = _(
+    "A hold item that\n"
+    "restores HP but\n"
+    "may confuse.");
+
+static const u8 sMagoBerryDesc[] = _(
+    "A hold item that\n"
+    "restores HP but\n"
+    "may confuse.");
+
+static const u8 sAguavBerryDesc[] = _(
+    "A hold item that\n"
+    "restores HP but\n"
+    "may confuse.");
+
+static const u8 sIapapaBerryDesc[] = _(
+    "A hold item that\n"
+    "restores HP but\n"
+    "may confuse.");
+
+static const u8 sRazzBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow RAZZ.");
+
+static const u8 sBlukBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow BLUK.");
+
+static const u8 sNanabBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow NANAB.");
+
+static const u8 sWepearBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow WEPEAR.");
+
+static const u8 sPinapBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow PINAP.");
+
+static const u8 sPomegBerryDesc[] = _(
+    "Makes a POKéMON\n"
+    "friendly but lowers\n"
+    "base HP.");
+
+static const u8 sKelpsyBerryDesc[] = _(
+    "Makes a POKéMON\n"
+    "friendly but lowers\n"
+    "base ATTACK.");
+
+static const u8 sQualotBerryDesc[] = _(
+    "Makes a POKéMON\n"
+    "friendly but lowers\n"
+    "base DEFENSE.");
+
+static const u8 sHondewBerryDesc[] = _(
+    "Makes a POKéMON\n"
+    "friendly but lowers\n"
+    "base SP. ATK.");
+
+static const u8 sGrepaBerryDesc[] = _(
+    "Makes a POKéMON\n"
+    "friendly but lowers\n"
+    "base SP. DEF.");
+
+static const u8 sTamatoBerryDesc[] = _(
+    "Makes a POKéMON\n"
+    "friendly but lowers\n"
+    "base SPEED.");
+
+static const u8 sCornnBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow CORNN.");
+
+static const u8 sMagostBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow MAGOST.");
+
+static const u8 sRabutaBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow RABUTA.");
+
+static const u8 sNomelBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow NOMEL.");
+
+static const u8 sSpelonBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow SPELON.");
+
+static const u8 sPamtreBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow PAMTRE.");
+
+static const u8 sWatmelBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow WATMEL.");
+
+static const u8 sDurinBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow DURIN.");
+
+static const u8 sBelueBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow BELUE.");
+
+static const u8 sLiechiBerryDesc[] = _(
+    "A hold item that\n"
+    "raises ATTACK in\n"
+    "a pinch.");
+
+static const u8 sGanlonBerryDesc[] = _(
+    "A hold item that\n"
+    "raises DEFENSE in\n"
+    "a pinch.");
+
+static const u8 sSalacBerryDesc[] = _(
+    "A hold item that\n"
+    "raises SPEED in\n"
+    "a pinch.");
+
+static const u8 sPetayaBerryDesc[] = _(
+    "A hold item that\n"
+    "raises SP. ATK in\n"
+    "a pinch.");
+
+static const u8 sApicotBerryDesc[] = _(
+    "A hold item that\n"
+    "raises SP. DEF in\n"
+    "a pinch.");
+
+static const u8 sLansatBerryDesc[] = _(
+    "A hold item that\n"
+    "ups the critical-\n"
+    "hit rate in a pinch.");
+
+static const u8 sStarfBerryDesc[] = _(
+    "A hold item that\n"
+    "sharply boosts a\n"
+    "stat in a pinch.");
+
+static const u8 sMicleBerryDesc[] = _(
+    "When held, it ups\n"
+    "the Accuracy of a\n"
+    "move in a pinch.");
+
+static const u8 sEnigmaBerryDesc[] = _(
+    "{POKEBLOCK} ingredient.\n"
+    "Plant in loamy soil\n"
+    "to grow a mystery.");
+
+static const u8 sOccaBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Fire\n"
     "move if weak to it.");

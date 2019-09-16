@@ -323,6 +323,62 @@ const struct Item gItems[] =
         .secondaryId = 22,
     },
 
+    [ITEM_SPORT_BALL] =
+    {
+        .name = _("Sport Ball"),
+        .itemId = ITEM_SPORT_BALL,
+        .price = 10,
+        .description = sSportBallDesc,
+        .pocket = POCKET_POKE_BALLS,
+        .type = 11,
+        .fieldUseFunc = NULL,
+        .battleUsage = 2,
+        .battleUseFunc = ItemUseInBattle_PokeBall,
+        .secondaryId = 23, // To Do
+    },
+
+    [ITEM_PARK_BALL] =
+    {
+        .name = _("Park Ball"),
+        .itemId = ITEM_PARK_BALL,
+        .price = 10,
+        .description = sParkBallDesc,
+        .pocket = POCKET_POKE_BALLS,
+        .type = 11,
+        .fieldUseFunc = NULL,
+        .battleUsage = 2,
+        .battleUseFunc = ItemUseInBattle_PokeBall,
+        .secondaryId = 24, // To Do
+    },
+
+    [ITEM_DREAM_BALL] =
+    {
+        .name = _("Dream Ball"),
+        .itemId = ITEM_DREAM_BALL,
+        .price = 10,
+        .description = sCherishBallDesc,
+        .pocket = POCKET_POKE_BALLS,
+        .type = 11,
+        .fieldUseFunc = NULL,
+        .battleUsage = 2,
+        .battleUseFunc = ItemUseInBattle_PokeBall,
+        .secondaryId = 25, // To Do
+    },
+
+    [ITEM_BEAST_BALL] =
+    {
+        .name = _("Beast Ball"),
+        .itemId = ITEM_BEAST_BALL,
+        .price = 10,
+        .description = sBeastBallDesc,
+        .pocket = POCKET_POKE_BALLS,
+        .type = 11,
+        .fieldUseFunc = NULL,
+        .battleUsage = 2,
+        .battleUseFunc = ItemUseInBattle_PokeBall,
+        .secondaryId = 26, // To Do
+    },
+
 // Medicine
 
     [ITEM_POTION] =
@@ -2232,6 +2288,20 @@ const struct Item gItems[] =
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_MICLE_BERRY] =
+    {
+        .name = _("Micle Berry"),
+        .itemId = ITEM_MICLE_BERRY,
+        .price = 20,
+        .holdEffect = HOLD_EFFECT_NONE, // Placeholder
+        .holdEffectParam = 4,
+        .description = sMicleBerryDesc,
+        .pocket = POCKET_BERRIES,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
     },
 
     [ITEM_ENIGMA_BERRY] =
