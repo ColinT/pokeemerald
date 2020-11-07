@@ -6525,7 +6525,7 @@ const struct Item gItems[] =
         .name = _("Flame Plate"),
         .itemId = ITEM_FLAME_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_FIRE_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gFlamePlateItemDescription,
         .importance = 0,
@@ -6533,9 +6533,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_FIRE,
     },
 
     [ITEM_SPLASH_PLATE] =
@@ -6543,7 +6541,7 @@ const struct Item gItems[] =
         .name = _("Splash Plate"),
         .itemId = ITEM_SPLASH_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_WATER_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gSplashPlateItemDescription,
         .importance = 0,
@@ -6551,9 +6549,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_WATER,
     },
 
     [ITEM_ZAP_PLATE] =
@@ -6561,7 +6557,7 @@ const struct Item gItems[] =
         .name = _("Zap Plate"),
         .itemId = ITEM_ZAP_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_ELECTRIC_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gZapPlateItemDescription,
         .importance = 0,
@@ -6569,9 +6565,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_ELECTRIC,
     },
 
     [ITEM_MEADOW_PLATE] =
@@ -6579,7 +6573,7 @@ const struct Item gItems[] =
         .name = _("Meadow Plate"),
         .itemId = ITEM_MEADOW_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_GRASS_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gMeadowPlateItemDescription,
         .importance = 0,
@@ -6587,6 +6581,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_GRASS,
     },
 
     [ITEM_ICICLE_PLATE] =
@@ -6594,7 +6589,7 @@ const struct Item gItems[] =
         .name = _("Icicle Plate"),
         .itemId = ITEM_ICICLE_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_ICE_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gIciclePlateItemDescription,
         .importance = 0,
@@ -6602,6 +6597,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_ICE,
     },
 
     [ITEM_FIST_PLATE] =
@@ -6609,7 +6605,7 @@ const struct Item gItems[] =
         .name = _("Fist Plate"),
         .itemId = ITEM_FIST_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_FIGHTING_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gFistPlateItemDescription,
         .importance = 0,
@@ -6617,6 +6613,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_FIGHTING,
     },
 
     [ITEM_TOXIC_PLATE] =
@@ -6624,7 +6621,7 @@ const struct Item gItems[] =
         .name = _("Toxic Plate"),
         .itemId = ITEM_TOXIC_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_POISON_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gToxicPlateItemDescription,
         .importance = 0,
@@ -6632,6 +6629,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_POISON,
     },
 
     [ITEM_EARTH_PLATE] =
@@ -6639,7 +6637,7 @@ const struct Item gItems[] =
         .name = _("Earth Plate"),
         .itemId = ITEM_EARTH_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_GROUND_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gEarthPlateItemDescription,
         .importance = 0,
@@ -6647,6 +6645,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_GROUND,
     },
 
     [ITEM_SKY_PLATE] =
@@ -6654,7 +6653,7 @@ const struct Item gItems[] =
         .name = _("Sky Plate"),
         .itemId = ITEM_SKY_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_FLYING_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gSkyPlateItemDescription,
         .importance = 0,
@@ -6662,6 +6661,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_FLYING,
     },
 
     [ITEM_MIND_PLATE] =
@@ -6669,7 +6669,7 @@ const struct Item gItems[] =
         .name = _("Mind Plate"),
         .itemId = ITEM_MIND_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_PSYCHIC_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gMindPlateItemDescription,
         .importance = 0,
@@ -6677,6 +6677,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_PSYCHIC,
     },
 
     [ITEM_INSECT_PLATE] =
@@ -6684,7 +6685,7 @@ const struct Item gItems[] =
         .name = _("Insect Plate"),
         .itemId = ITEM_INSECT_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_BUG_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gInsectPlateItemDescription,
         .importance = 0,
@@ -6692,6 +6693,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_BUG,
     },
 
     [ITEM_STONE_PLATE] =
@@ -6699,7 +6701,7 @@ const struct Item gItems[] =
         .name = _("Stone Plate"),
         .itemId = ITEM_STONE_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_ROCK_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gStonePlateItemDescription,
         .importance = 0,
@@ -6707,6 +6709,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_ROCK,
     },
 
     [ITEM_SPOOKY_PLATE] =
@@ -6714,7 +6717,7 @@ const struct Item gItems[] =
         .name = _("Spooky Plate"),
         .itemId = ITEM_SPOOKY_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_GHOST_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gSpookyPlateItemDescription,
         .importance = 0,
@@ -6722,9 +6725,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_GHOST,
     },
 
     [ITEM_DRACO_PLATE] =
@@ -6732,7 +6733,7 @@ const struct Item gItems[] =
         .name = _("Draco Plate"),
         .itemId = ITEM_DRACO_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_DRAGON_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gDracoPlateItemDescription,
         .importance = 0,
@@ -6740,9 +6741,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_DRAGON,
     },
 
     [ITEM_DREAD_PLATE] =
@@ -6750,7 +6749,7 @@ const struct Item gItems[] =
         .name = _("Dread Plate"),
         .itemId = ITEM_DREAD_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_DARK_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gDreadPlateItemDescription,
         .importance = 0,
@@ -6758,9 +6757,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_DARK,
     },
 
     [ITEM_IRON_PLATE] =
@@ -6768,7 +6765,7 @@ const struct Item gItems[] =
         .name = _("Iron Plate"),
         .itemId = ITEM_IRON_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_STEEL_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gIronPlateItemDescription,
         .importance = 0,
@@ -6776,9 +6773,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_STEEL,
     },
 
     [ITEM_EVIOLITE] =
@@ -7314,7 +7309,7 @@ const struct Item gItems[] =
         .name = _("Pixie Plate"),
         .itemId = ITEM_PIXIE_PLATE,
         .price = 200,
-        .holdEffect = HOLD_EFFECT_FAIRY_POWER,
+        .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = gPixiePlateItemDescription,
         .importance = 0,
@@ -7322,9 +7317,7 @@ const struct Item gItems[] =
         .pocket = POCKET_ITEMS,
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .battleUsage = 0,
-        .battleUseFunc = NULL,
-        .secondaryId = 0,
+        .secondaryId = TYPE_FAIRY,
     },
 
     [ITEM_SAFETY_GOGGLES] =
