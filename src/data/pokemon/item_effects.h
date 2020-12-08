@@ -325,38 +325,62 @@ const u8 gItemEffect_DireHit[8] = {
 };
 
 const u8 gItemEffect_XAttack[8] = {
-    [0] = 1, // ITEM0_X_ATTACK
+#if X_ITEMS_REWORK == TRUE
+    [1] = ITEM1_X_ATTACK,
+#else
+    [0] = 1,
+#endif
     [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
 
 const u8 gItemEffect_XDefend[8] = {
-    [1] = 1 << 4, /// ITEM1_X_DEFEND
+#if X_ITEMS_REWORK == TRUE
+    [1] = ITEM1_X_DEFEND,
+#else
+    [1] = 1 << 4,
+#endif
     [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
 
 const u8 gItemEffect_XSpeed[8] = {
-    [1] = 1, // ITEM1_X_SPEED
+#if X_ITEMS_REWORK == TRUE
+    [1] = ITEM1_X_SPEED,
+#else
+    [1] = 1,
+#endif
     [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
 
 const u8 gItemEffect_XAccuracy[8] = {
-    [2] = 1 << 4, // ITEM2_X_ACCURACY
+#if X_ITEMS_REWORK == TRUE
+    [1] = ITEM1_X_ACCURACY,
+#else
+    [2] = 1 << 4,
+#endif
     [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
 
 const u8 gItemEffect_XSpecialAttack[8] = {
+#if X_ITEMS_REWORK == TRUE
+    [1] = ITEM1_X_SPATK,
+#else
     [2] = 1,
+#endif
     [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
     [6] = 1,
     [7] = 1,
 };
 
 const u8 gItemEffect_XSpecialDefense[8] = {
+#if X_ITEMS_REWORK == TRUE
+    [1] = ITEM1_X_SPDEF,
+#else
     [2] = 1,
+#endif
     [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
