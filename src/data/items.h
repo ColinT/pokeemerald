@@ -5210,11 +5210,11 @@ const struct Item gItems[] =
         .itemId = ITEM_OLD_AMBER,
         .description = sOldAmberDesc,
         #if I_KEY_FOSSILS >= GEN_4
-			.price = 1000,
+            .price = 1000,
             .importance = 0,
             .pocket = POCKET_ITEMS,
         #else
-			.price = 0,
+            .price = 0,
             .importance = 1,
             .pocket = POCKET_KEY_ITEMS,
         #endif
@@ -5293,11 +5293,11 @@ const struct Item gItems[] =
         .itemId = ITEM_HELIX_FOSSIL,
         .description = sHelixFossilDesc,
         #if I_KEY_FOSSILS >= GEN_4
-			.price = 1000,
+            .price = 1000,
             .importance = 0,
             .pocket = POCKET_ITEMS,
         #else
-			.price = 0,
+            .price = 0,
             .importance = 1,
             .pocket = POCKET_KEY_ITEMS,
         #endif
@@ -5314,11 +5314,11 @@ const struct Item gItems[] =
         .itemId = ITEM_DOME_FOSSIL,
         .description = sDomeFossilDesc,
         #if I_KEY_FOSSILS >= GEN_4
-			.price = 1000,
+            .price = 1000,
             .importance = 0,
             .pocket = POCKET_ITEMS,
         #else
-			.price = 0,
+            .price = 0,
             .importance = 1,
             .pocket = POCKET_KEY_ITEMS,
         #endif
@@ -5333,11 +5333,11 @@ const struct Item gItems[] =
         .itemId = ITEM_ROOT_FOSSIL,
         .description = sRootFossilDesc,
         #if I_KEY_FOSSILS >= GEN_4
-			.price = 1000,
+            .price = 1000,
             .importance = 0,
             .pocket = POCKET_ITEMS,
         #else
-			.price = 0,
+            .price = 0,
             .importance = 1,
             .pocket = POCKET_KEY_ITEMS,
         #endif
@@ -5352,11 +5352,11 @@ const struct Item gItems[] =
         .itemId = ITEM_CLAW_FOSSIL,
         .description = sClawFossilDesc,
         #if I_KEY_FOSSILS >= GEN_4
-			.price = 1000,
+            .price = 1000,
             .importance = 0,
             .pocket = POCKET_ITEMS,
         #else
-			.price = 0,
+            .price = 0,
             .importance = 1,
             .pocket = POCKET_KEY_ITEMS,
         #endif
@@ -8126,7 +8126,7 @@ const struct Item gItems[] =
         .name = _("Mega Bracelet"),
         .itemId = ITEM_MEGA_BRACELET,
         .price = 0,
-		.importance = 1,
+        .importance = 1,
         .description = sMegaBraceletDesc,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -8356,7 +8356,7 @@ const struct Item gItems[] =
         .name = _("Shiny Charm"),
         .itemId = ITEM_SHINY_CHARM,
         .price = 0,
-		.importance = 1,
+        .importance = 1,
         .description = sShinyCharmDesc,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
