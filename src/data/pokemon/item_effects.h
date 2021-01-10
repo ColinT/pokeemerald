@@ -334,9 +334,9 @@ const u8 gItemEffect_XAttack[8] = {
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
 
-const u8 gItemEffect_XDefend[8] = {
+const u8 gItemEffect_XDefense[8] = {
 #ifdef BATTLE_ENGINE
-    [1] = ITEM1_X_DEFEND,
+    [1] = ITEM1_X_DEFENSE,
 #else
     [1] = 1 << 4,
 #endif
@@ -527,7 +527,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_GUARD_SPEC - ITEM_POTION] = gItemEffect_GuardSpec,
     [ITEM_DIRE_HIT - ITEM_POTION] = gItemEffect_DireHit,
     [ITEM_X_ATTACK - ITEM_POTION] = gItemEffect_XAttack,
-    [ITEM_X_DEFENSE - ITEM_POTION] = gItemEffect_XDefend,
+    [ITEM_X_DEFENSE - ITEM_POTION] = gItemEffect_XDefense,
     [ITEM_X_SPEED - ITEM_POTION] = gItemEffect_XSpeed,
     [ITEM_X_ACCURACY - ITEM_POTION] = gItemEffect_XAccuracy,
     [ITEM_X_SP_ATK - ITEM_POTION] = gItemEffect_XSpecialAttack,
