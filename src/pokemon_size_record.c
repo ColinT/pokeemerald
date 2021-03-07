@@ -36,7 +36,7 @@ static const struct UnknownStruct sBigMonSizeTable[] =
     { 1700,   1,   -26 },
 };
 
-// - 4 for unused gift ribbon bits in MON_DATA_UNUSED_RIBBONS
+// - 4 for unused gift ribbon bits in MON_DATA_FATEFUL_ENCOUNTER
 static const u8 sGiftRibbonsMonDataIds[GIFT_RIBBONS_COUNT - 4] =
 {
     MON_DATA_MARINE_RIBBON, MON_DATA_LAND_RIBBON, MON_DATA_SKY_RIBBON,
