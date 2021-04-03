@@ -310,7 +310,7 @@ static const struct SpriteTemplate gBerryPicRotatingSpriteTemplate =
     .callback = SpriteCallbackDummy,
 };
 
-static const struct CompressedTilesPal gBerryPicTable[] =
+static const struct CompressedTilesPal sBerryPicTable[] =
 {
      [ITEM_CHERI_BERRY - FIRST_BERRY_INDEX] = {gBerryPic_Cheri, gBerryPalette_Cheri},
      [ITEM_CHESTO_BERRY - FIRST_BERRY_INDEX] = {gBerryPic_Chesto, gBerryPalette_Chesto},
@@ -381,17 +381,17 @@ static const struct CompressedTilesPal gBerryPicTable[] =
      [ITEM_MARANGA_BERRY - FIRST_BERRY_INDEX] = {},
 };
 
-const struct CompressedSpriteSheet gUnknown_0857FDEC =
+const struct CompressedSpriteSheet gBerryCheckCircleSpriteSheet  =
 {
-    gBerryCheckCircle_Gfx, 0x800, 10000
+    gBerryCheckCircle_Gfx, 0x800, TAG_BERRY_CHECK_CIRCLE_GFX
 };
 
-const struct CompressedSpritePalette gUnknown_0857FDF4 =
+const struct CompressedSpritePalette gBerryCheckCirclePaletteTable  =
 {
-    gUnknown_08D9BEF0, 10000
+    gBerryCheck_Pal, TAG_BERRY_CHECK_CIRCLE_GFX
 };
 
-static const struct OamData sOamData_857FDFC =
+static const struct OamData sBerryCheckCircleOamData =
 {
     .y = 0,
     .affineMode = ST_OAM_AFFINE_OFF,

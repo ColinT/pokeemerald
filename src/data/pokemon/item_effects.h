@@ -173,13 +173,16 @@ const u8 gItemEffect_SacredAsh[7] = {
     [6] = ITEM6_HEAL_HP_FULL,
 };
 
+#define VITAMIN_FRIENDSHIP_CHANGE(i)             \
+    [(i) + 0] = 5, /* Friendship change, low */  \
+    [(i) + 1] = 3, /* Friendship change, mid */  \
+    [(i) + 2] = 2  /* Friendship change, high */
+
 const u8 gItemEffect_HPUp[11] = {
     [4] = ITEM4_EV_HP,
     [5] = ITEM5_FRIENDSHIP_ALL,
     [6] = 10,
-    [7] = 5,
-    [8] = 3,
-    [9] = 2,
+    VITAMIN_FRIENDSHIP_CHANGE(7),
     [10] = ITEM10_IS_VITAMIN,
 };
 
@@ -187,45 +190,35 @@ const u8 gItemEffect_Protein[11] = {
     [4] = ITEM4_EV_ATK,
     [5] = ITEM5_FRIENDSHIP_ALL,
     [6] = 10,
-    [7] = 5,
-    [8] = 3,
-    [9] = 2,
+    VITAMIN_FRIENDSHIP_CHANGE(7),
     [10] = ITEM10_IS_VITAMIN,
 };
 
 const u8 gItemEffect_Iron[11] = {
     [5] = ITEM5_EV_DEF | ITEM5_FRIENDSHIP_ALL,
     [6] = 10,
-    [7] = 5,
-    [8] = 3,
-    [9] = 2,
+    VITAMIN_FRIENDSHIP_CHANGE(7),
     [10] = ITEM10_IS_VITAMIN,
 };
 
 const u8 gItemEffect_Carbos[11] = {
     [5] = ITEM5_EV_SPEED | ITEM5_FRIENDSHIP_ALL,
     [6] = 10,
-    [7] = 5,
-    [8] = 3,
-    [9] = 2,
+    VITAMIN_FRIENDSHIP_CHANGE(7),
     [10] = ITEM10_IS_VITAMIN,
 };
 
 const u8 gItemEffect_Calcium[11] = {
     [5] = ITEM5_EV_SPATK | ITEM5_FRIENDSHIP_ALL,
     [6] = 10,
-    [7] = 5,
-    [8] = 3,
-    [9] = 2,
+    VITAMIN_FRIENDSHIP_CHANGE(7),
     [10] = ITEM10_IS_VITAMIN,
 };
 
 const u8 gItemEffect_Zinc[11] = {
     [5] = ITEM5_EV_SPDEF | ITEM5_FRIENDSHIP_ALL,
     [6] = 10,
-    [7] = 5,
-    [8] = 3,
-    [9] = 2,
+    VITAMIN_FRIENDSHIP_CHANGE(7),
     [10] = ITEM10_IS_VITAMIN,
 };
 
@@ -555,7 +548,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_POMEG_BERRY - ITEM_POTION] = gItemEffect_PomegBerry,
     [ITEM_KELPSY_BERRY - ITEM_POTION] = gItemEffect_KelpsyBerry,
     [ITEM_QUALOT_BERRY - ITEM_POTION] = gItemEffect_QualotBerry,
-    [ITEM_HONDEW_BERRY - ITEM_POTION] = gItemEffect_HondrewBerry,
+    [ITEM_HONDEW_BERRY - ITEM_POTION] = gItemEffect_HondewBerry,
     [ITEM_GREPA_BERRY - ITEM_POTION] = gItemEffect_GrepaBerry,
     [ITEM_TAMATO_BERRY - ITEM_POTION] = gItemEffect_TamatoBerry,
     [LAST_BERRY_INDEX - ITEM_POTION] = NULL

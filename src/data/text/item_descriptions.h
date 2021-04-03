@@ -900,87 +900,87 @@ static const u8 sOccaBerryDesc[] = _(
     "weakens a Fire\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_PasshoBerry[] = _(
+static const u8 sPasshoBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Water\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_WacanBerry[] = _(
+static const u8 sWacanBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Electric\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_RindoBerry[] = _(
+static const u8 sRindoBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Grass\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_YacheBerry[] = _(
+static const u8 sYacheBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Ice\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_ChopleBerry[] = _(
+static const u8 sChopleBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Fighting\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_KebiaBerry[] = _(
+static const u8 sKebiaBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Poison\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_ShucaBerry[] = _(
+static const u8 sShucaBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Ground\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_CobaBerry[] = _(
+static const u8 sCobaBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Flying\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_PayapaBerry[] = _(
+static const u8 sPayapaBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Psychic\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_TangaBerry[] = _(
+static const u8 sTangaBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Bug\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_ChartiBerry[] = _(
+static const u8 sChartiBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Rock\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_KasibBerry[] = _(
+static const u8 sKasibBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Ghost\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_HabanBerry[] = _(
+static const u8 sHabanBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Dragon\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_ColburBerry[] = _(
+static const u8 sColburBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Dark\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_BabiriBerry[] = _(
+static const u8 sBabiriBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Steel\n"
     "move if weak to it.");
 
-static const u8 gItemDescription_ChilanBerry[] = _(
+static const u8 sChilanBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Normal\n"
     "move.");
 
-static const u8 gItemDescription_RoseliBerry[] = _(
+static const u8 sRoseliBerryDesc[] = _(
     "A hold item that\n"
     "weakens a Fairy\n"
     "move if weak to it.");

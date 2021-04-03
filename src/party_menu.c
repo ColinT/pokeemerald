@@ -4400,14 +4400,14 @@ void Task_AbilityCapsule(u8 taskId)
             || tAbilityNum > 1
             || !tSpecies)
         {
-            gUnknown_0203CEE8 = 0;
+            gPartyMenuUseExitCallback = FALSE;
             PlaySE(SE_SELECT);
             DisplayPartyMenuMessage(gText_WontHaveEffect, 1);
             ScheduleBgCopyTilemapToVram(2);
             gTasks[taskId].func = Task_ClosePartyMenuAfterText;
             return;
         }
-        gUnknown_0203CEE8 = 1;
+        gPartyMenuUseExitCallback = TRUE;
         GetMonNickname(&gPlayerParty[tMonId], gStringVar1);
         StringCopy(gStringVar2, gAbilityNames[GetAbilityBySpecies(tSpecies, tAbilityNum)]);
         StringExpandPlaceholders(gStringVar4, askText);
@@ -4417,9 +4417,9 @@ void Task_AbilityCapsule(u8 taskId)
         tState++;
         break;
     case 1:
-        if (!sub_81B1BD4())
+        if (!IsPartyMenuTextPrinterActive())
         {
-            sub_81B334C();
+            PartyMenuDisplayYesNoMenu();
             tState++;
         }
         break;
@@ -4431,7 +4431,7 @@ void Task_AbilityCapsule(u8 taskId)
             break;
         case 1:
         case MENU_B_PRESSED:
-            gUnknown_0203CEE8 = 0;
+            gPartyMenuUseExitCallback  = FALSE;
             PlaySE(SE_SELECT);
             ScheduleBgCopyTilemapToVram(2);
             // Don't exit party selections screen, return to choosing a mon.
@@ -4443,14 +4443,14 @@ void Task_AbilityCapsule(u8 taskId)
         }
         break;
     case 3:
-        PlaySE(SE_KAIFUKU);
+        PlaySE(SE_USE_ITEM);
         StringExpandPlaceholders(gStringVar4, doneText);
         DisplayPartyMenuMessage(gStringVar4, 1);
         ScheduleBgCopyTilemapToVram(2);
         tState++;
         break;
     case 4:
-        if (!sub_81B1BD4())
+        if (!IsPartyMenuTextPrinterActive())
             tState++;
         break;
     case 5:
@@ -4466,7 +4466,7 @@ void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc task)
     s16 *data = gTasks[taskId].data;
 
     tState = 0;
-    tMonId = gUnknown_0203CEC8.slotId;
+    tMonId = gPartyMenu.slotId;
     tSpecies = GetMonData(&gPlayerParty[tMonId], MON_DATA_SPECIES, NULL);
     tAbilityNum = GetMonData(&gPlayerParty[tMonId], MON_DATA_ABILITY_NUM, NULL) ^ 1;
     SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
@@ -5279,7 +5279,11 @@ u8 GetItemEffectType(u16 item)
     else
         itemEffect = gItemEffectTable[item - ITEM_POTION];
 
+#ifndef ITEM_EXPANSION
     if ((itemEffect[0] & (ITEM0_DIRE_HIT | ITEM0_X_ATTACK)) || itemEffect[1] || itemEffect[2] || (itemEffect[3] & ITEM3_GUARD_SPEC))
+#else
+    if ((itemEffect[0] & ITEM0_DIRE_HIT) || itemEffect[1] || (itemEffect[3] & ITEM3_GUARD_SPEC))
+#endif
         return ITEM_EFFECT_X_ITEM;
     else if (itemEffect[0] & ITEM0_SACRED_ASH)
         return ITEM_EFFECT_SACRED_ASH;

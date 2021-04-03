@@ -2,6 +2,7 @@
 #define GUARD_CONSTANTS_ITEMS_H
 
 #define ITEM_NONE 0
+
 // Balls
 #define ITEM_MASTER_BALL 1
 #define ITEM_ULTRA_BALL 2
@@ -30,6 +31,13 @@
 #define ITEM_DREAM_BALL 25
 #define ITEM_BEAST_BALL 26
 #define ITEM_PREMIER_BALL 27
+
+// Note: If moving ball IDs around, updating FIRST_BALL/LAST_BALL is not sufficient
+//       Several places expect the ball IDs to be first and contiguous (e.g. gBattlescriptsForBallThrow and MON_DATA_POKEBALL)
+//       If adding new balls, it's easiest to insert them after the last ball and increment the below IDs (and removing ITEM_034 for example)
+#define FIRST_BALL ITEM_MASTER_BALL
+#define LAST_BALL  ITEM_PREMIER_BALL
+
 // Pokemon Items
 #define ITEM_POTION 28
 #define ITEM_ANTIDOTE 29
@@ -151,6 +159,9 @@
 #define ITEM_DREAM_MAIL 141
 #define ITEM_FAB_MAIL 142
 #define ITEM_RETRO_MAIL 143
+
+#define FIRST_MAIL_INDEX ITEM_ORANGE_MAIL
+
 // Berries
 #define ITEM_CHERI_BERRY 144
 #define ITEM_CHESTO_BERRY 145
@@ -219,6 +230,10 @@
 #define ITEM_ROWAP_BERRY 208
 #define ITEM_KEE_BERRY 209
 #define ITEM_MARANGA_BERRY 210
+
+#define FIRST_BERRY_INDEX ITEM_CHERI_BERRY
+#define LAST_BERRY_INDEX ITEM_MARANGA_BERRY
+
 // Battle Held items
 #define ITEM_BRIGHT_POWDER 211
 #define ITEM_WHITE_HERB 212
@@ -694,9 +709,27 @@
 #define ITEMS_COUNT 604
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
-#define FIRST_BERRY_INDEX ITEM_CHERI_BERRY
-#define LAST_BERRY_INDEX ITEM_MARANGA_BERRY
+// Range of berries given out by various NPCS
+#define FIRST_BERRY_MASTER_BERRY      ITEM_POMEG_BERRY
+#define LAST_BERRY_MASTER_BERRY       ITEM_NOMEL_BERRY
+#define FIRST_BERRY_MASTER_WIFE_BERRY ITEM_CHERI_BERRY
+#define LAST_BERRY_MASTER_WIFE_BERRY  ITEM_SITRUS_BERRY
+#define FIRST_KIRI_BERRY              ITEM_POMEG_BERRY
+#define LAST_KIRI_BERRY               ITEM_NOMEL_BERRY
+#define FIRST_ROUTE_114_MAN_BERRY     ITEM_RAZZ_BERRY
+#define LAST_ROUTE_114_MAN_BERRY      ITEM_PINAP_BERRY
+
+#define NUM_BERRY_MASTER_BERRIES          (LAST_BERRY_MASTER_BERRY - FIRST_BERRY_MASTER_BERRY + 1)
+#define NUM_BERRY_MASTER_BERRIES_SKIPPED  (FIRST_BERRY_MASTER_BERRY - FIRST_BERRY_INDEX)
+#define NUM_BERRY_MASTER_WIFE_BERRIES     (LAST_BERRY_MASTER_WIFE_BERRY - FIRST_BERRY_MASTER_WIFE_BERRY + 1)
+#define NUM_KIRI_BERRIES                  (LAST_KIRI_BERRY - FIRST_KIRI_BERRY + 1)
+#define NUM_KIRI_BERRIES_SKIPPED          (FIRST_KIRI_BERRY - FIRST_BERRY_INDEX)
+#define NUM_ROUTE_114_MAN_BERRIES         (LAST_ROUTE_114_MAN_BERRY - FIRST_ROUTE_114_MAN_BERRY + 1)
+#define NUM_ROUTE_114_MAN_BERRIES_SKIPPED (FIRST_ROUTE_114_MAN_BERRY - FIRST_BERRY_INDEX)
+
 #define ITEM_TO_BERRY(itemId)(((itemId - FIRST_BERRY_INDEX) + 1))
+#define ITEM_TO_MAIL(itemId)((itemId) - FIRST_MAIL_INDEX)
+#define MAIL_NONE 0xFF
 
 #define NUM_TECHNICAL_MACHINES 50
 #define NUM_HIDDEN_MACHINES 8
@@ -730,6 +763,6 @@
 #define ITEM_B_USE_OTHER    2
 
 // Check if the item is one that can be used on a Pokemon.
-#define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX)
+#define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= LAST_BERRY_INDEX)
 
 #endif  // GUARD_CONSTANTS_ITEMS_H
