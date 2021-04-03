@@ -165,9 +165,6 @@ static EWRAM_DATA struct {
     /*0xFE*/ u8 wirelessWinBottom;
 } *sTradeData = {NULL};
 
-#if !defined(NONMATCHING) && MODERN
-#define static
-#endif
 static bool32 IsWirelessTrade(void);
 static void CB2_CreateTradeMenu(void);
 static void VBlankCB_TradeMenu(void);
@@ -1159,12 +1156,12 @@ static void ReactToLinkTradeData(u8 mpId, u8 status)
     {
         switch (gBlockRecvBuffer[0][0])
         {
-        case LINKCMD_CANCEL_TRADE:
+        case LINKCMD_BOTH_CANCEL_TRADE:
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             PrintTradeMessage(TRADE_MSG_WAITING_FOR_FRIEND);
             sTradeMenuData->tradeMenuFunc = TRADEMENUFUNC_CANCEL_TRADE_1;
             break;
-        case LINKCMD_0xEECC:
+        case LINKCMD_PARTNER_CANCEL_TRADE:
             PrintTradeMessage(TRADE_MSG_FRIEND_WANTS_TO_TRADE);
             sTradeMenuData->tradeMenuFunc = TRADEMENUFUNC_REDRAW_MAIN_MENU;
             break;
@@ -1179,7 +1176,7 @@ static void ReactToLinkTradeData(u8 mpId, u8 status)
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
             sTradeMenuData->tradeMenuFunc = TRADEMENUFUNC_LINK_TRADE_WAIT_FADE;
             break;
-        case LINKCMD_0xDDEE:
+        case LINKCMD_PLAYER_CANCEL_TRADE:
             PrintTradeMessage(TRADE_MSG_CANCELED);
             sTradeMenuData->tradeMenuFunc = TRADEMENUFUNC_REDRAW_MAIN_MENU;
         }
@@ -1207,7 +1204,7 @@ static void QueueLinkTradeData(void)
               && sTradeMenuData->partnerLinkFlagChoseAction == WANTS_TO_CANCEL)
         {
             PrintTradeMessage(TRADE_MSG_CANCELED);
-            sTradeMenuData->linkData[0] = LINKCMD_0xEECC;
+            sTradeMenuData->linkData[0] = LINKCMD_PARTNER_CANCEL_TRADE;
             sTradeMenuData->linkData[1] = 0;
             QueueAction(QUEUE_DELAY_DATA, QUEUE_SEND_DATA);
             sTradeMenuData->playerLinkFlagStatus = sTradeMenuData->partnerLinkFlagStatus = 0;
@@ -1218,7 +1215,7 @@ static void QueueLinkTradeData(void)
               && sTradeMenuData->partnerLinkFlagChoseAction == WANTS_TO_TRADE)
         {
             PrintTradeMessage(TRADE_MSG_FRIEND_WANTS_TO_TRADE);
-            sTradeMenuData->linkData[0] = LINKCMD_0xDDEE;
+            sTradeMenuData->linkData[0] = LINKCMD_PLAYER_CANCEL_TRADE;
             sTradeMenuData->linkData[1] = 0;
             QueueAction(QUEUE_DELAY_DATA, QUEUE_SEND_DATA);
             sTradeMenuData->playerLinkFlagStatus = sTradeMenuData->partnerLinkFlagStatus = 0;
@@ -1228,7 +1225,7 @@ static void QueueLinkTradeData(void)
         else if (sTradeMenuData->playerLinkFlagChoseAction == WANTS_TO_CANCEL
               && sTradeMenuData->partnerLinkFlagChoseAction == WANTS_TO_CANCEL)
         {
-            sTradeMenuData->linkData[0] = LINKCMD_CANCEL_TRADE;
+            sTradeMenuData->linkData[0] = LINKCMD_BOTH_CANCEL_TRADE;
             sTradeMenuData->linkData[1] = 0;
             QueueAction(QUEUE_DELAY_DATA, QUEUE_SEND_DATA);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -1254,7 +1251,7 @@ static void QueueLinkTradeData(void)
          || sTradeMenuData->partnerLinkFlagStatus == CANCEL_TRADE)
         {
             PrintTradeMessage(TRADE_MSG_CANCELED);
-            sTradeMenuData->linkData[0] = LINKCMD_0xDDEE;
+            sTradeMenuData->linkData[0] = LINKCMD_PLAYER_CANCEL_TRADE;
             sTradeMenuData->linkData[1] = 0;
             QueueAction(QUEUE_DELAY_DATA, QUEUE_SEND_DATA);
             sTradeMenuData->playerLinkFlagStatus = 0;
@@ -2886,9 +2883,9 @@ static void InitTradeBgInternal(void)
     InitBgsFromTemplates(0, sTradeSequenceBgTemplates, ARRAY_COUNT(sTradeSequenceBgTemplates));
     ChangeBgX(0, 0, 0);
     ChangeBgY(0, 0, 0);
-    SetBgTilemapBuffer(0, Alloc(0x800));
-    SetBgTilemapBuffer(1, Alloc(0x800));
-    SetBgTilemapBuffer(3, Alloc(0x800));
+    SetBgTilemapBuffer(0, Alloc(BG_SCREEN_SIZE));
+    SetBgTilemapBuffer(1, Alloc(BG_SCREEN_SIZE));
+    SetBgTilemapBuffer(3, Alloc(BG_SCREEN_SIZE));
     DeactivateAllTextPrinters();
     DecompressAndLoadBgGfxUsingHeap(0, gBattleTextboxTiles, 0, 0, 0);
     LZDecompressWram(gBattleTextboxTilemap, gDecompressionBuffer);

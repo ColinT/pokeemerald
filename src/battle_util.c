@@ -1148,7 +1148,7 @@ void MarkAllBattlersForControllerExec(void) // unused
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
     {
         for (i = 0; i < gBattlersCount; i++)
-            gBattleControllerExecFlags |= gBitTable[i] << 0x1C;
+            gBattleControllerExecFlags |= gBitTable[i] << (32 - MAX_BATTLERS_COUNT);
     }
     else
     {
@@ -1168,7 +1168,7 @@ bool32 IsBattlerMarkedForControllerExec(u8 battlerId)
 void MarkBattlerForControllerExec(u8 battlerId)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
-        gBattleControllerExecFlags |= gBitTable[battlerId] << 0x1C;
+        gBattleControllerExecFlags |= gBitTable[battlerId] << (32 - MAX_BATTLERS_COUNT);
     else
         gBattleControllerExecFlags |= gBitTable[battlerId];
 }
