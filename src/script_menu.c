@@ -121,7 +121,7 @@ void TryDrawRepelMenu(void)
     static const u16 repelItems[] = {ITEM_REPEL, ITEM_SUPER_REPEL, ITEM_MAX_REPEL};
     struct MenuAction menuItems[4] = {NULL};
     int repelIndex, numMenuOptions = 0;
-    int isMultipleRepelTypesAvailable;
+    bool8 isMultipleRepelTypesAvailable;
 
     for (repelIndex = 0; repelIndex < ARRAY_COUNT(repelItems); repelIndex++)
     {
