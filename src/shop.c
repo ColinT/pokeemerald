@@ -1141,7 +1141,7 @@ static void Task_ReturnToItemListAfterItemPurchase(u8 taskId)
                 BuyMenuDisplayMessage(taskId, gText_ThrowInPremierBall, BuyMenuReturnToItemList);
             }
         }
-        else 
+        else
         {
             if (ItemId_GetPocket(tItemId) == POCKET_TM_HM)
             {
